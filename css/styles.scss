@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary_color: #d62300;
+  --secondary_color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--primary_color);
+  color: var(--secondary_color);
+  height: 100vh;
+  padding: 4rem 4rem 0;
+  font-size: 2rem;
+}
+
+.contenedor {
+  height: 100%;
+  position: relative;
+  & .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+    &__logo {
+      height: 100%;
+      &__img {
+        height: 100%;
+      }
+    }
+
+    &__nav {
+        &__item{
+            color: var(--secondary_color);
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+        &__item:hover{
+            text-decoration: underline;
+        }
+    }
+
+
+  }
+
+  & .main{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    &__text{
+        &__title{
+            font-size: 10rem;
+            font-weight: 400;
+            & span{
+                font-weight: bold;
+                font-size: 11rem;
+            }
+        }
+        &__p{
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        &__button{
+            padding: 1rem;
+            border-radius: 3rem;
+            width: 150px;
+            height: 60px;
+            cursor: pointer;
+            font-size: 1.7rem;
+            transition: all 0.5s;
+            border: none;
+        }
+        &__button:hover{
+            background-color: rgba(0, 0, 0, 0.9);
+            color: var(--secondary_color);
+        }
+    }
+    &__picture{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .img{
+            height: 100%;
+        }
+    }
+
+  }
+
+  & .footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    &__item{
+        font-size: 3rem;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    &__item:hover{
+        color: rgba(0, 0, 0, 0.9);
+    }
+  }
+}
